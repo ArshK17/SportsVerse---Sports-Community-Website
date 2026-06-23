@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football — SportsVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/football.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">SportsVerse ⚡</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="live-scores.html" class="nav-link"><span class="nav-live-dot"></span> Live Scores</a>
+    <a href="football.html" class="nav-link active">⚽ Football</a>
+    <a href="sports.html" class="nav-link">🏆 All Sports</a>
+    <a href="community.html" class="nav-link">💬 Community</a>
+  </div>
+  <div class="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search team, player...">
+  </div>
+  <div class="nav-actions">
+    <button class="btn-nav-ghost">Sign in</button>
+    <button class="btn-nav">Join free</button>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobile()">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">🏠 Home</a>
+  <a href="live-scores.html" class="mobile-link">🔴 Live Scores</a>
+  <a href="football.html" class="mobile-link active">⚽ Football</a>
+  <a href="sports.html" class="mobile-link">🏆 All Sports</a>
+  <a href="community.html" class="mobile-link">💬 Community</a>
+</div>
+<div class="ticker-wrap"><div class="ticker-inner" id="ticker"></div></div>
+
+<section class="football-hero">
+  <div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap">
+      <span class="badge badge-live"><span class="live-dot"></span>World Cup Live</span>
+      <span class="badge badge-hot">🔥 Most viewed</span>
+    </div>
+    <h1>⚽ Football<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">The Beautiful Game</span></h1>
+    <p>World Cup 2026 · Premier League · Champions League · La Liga · and every league on earth.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+      <a href="live-scores.html" class="btn-live btn-primary"><span class="live-dot"></span> Live scores</a>
+      <a href="community.html" class="btn-outline">💬 Community</a>
+    </div>
+  </div>
+</section>
+
+<div class="football-main">
+  <div class="wc-banner" onclick="location.href='live-scores.html'">
+    <div class="wc-banner-eyebrow"><span class="live-dot"></span> Now live · Group Stage</div>
+    <div class="wc-banner-title">🏆 FIFA World Cup 2026</div>
+    <div class="wc-banner-sub">The biggest tournament on earth. 48 teams. 104 matches. USA, Canada & Mexico.</div>
+    <div class="wc-meta">
+      <div class="wc-meta-item">📍 <strong>16 Host Cities</strong></div>
+      <div class="wc-meta-item">🗓️ <strong>Jun 11 – Jul 19, 2026</strong></div>
+      <div class="wc-meta-item">👥 <strong>48 Teams</strong></div>
+      <div class="wc-meta-item">⚽ <strong>104 Matches</strong></div>
+    </div>
+  </div>
+
+  <div class="fl-two-col">
+    <div class="fl-fixtures">
+      <div class="fl-tab-bar" id="flTabBar"></div>
+      <div id="flMatchList"></div>
+    </div>
+    <div>
+      <div class="fl-sidebar-block">
+        <div class="fl-sidebar-header">📊 World Cup Groups</div>
+        <div id="wcGroupsSmall" style="padding:.5rem 0"></div>
+      </div>
+      <div class="fl-sidebar-block">
+        <div class="fl-sidebar-header">🥅 Top Scorers</div>
+        <div class="top-scorers-list" id="topScorers"></div>
+      </div>
+      <div class="fl-sidebar-block">
+        <div class="fl-sidebar-header">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</div>
+        <table class="standings-table" id="plTable"><thead><tr><th>#</th><th>Club</th><th>P</th><th>GD</th><th>Pts</th></tr></thead><tbody id="plBody"></tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">SportsVerse ⚡</div><p>Every sport. Every team. Every fan.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="live-scores.html">Live Scores</a><a href="football.html">Football</a><a href="sports.html">All Sports</a><a href="community.html">Community</a></div>
+      <div class="footer-col"><h4>Football</h4><a href="#">World Cup 2026</a><a href="#">Premier League</a><a href="#">Champions League</a><a href="#">La Liga</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 SportsVerse.</p><div class="social-links"><button class="social-btn">𝕏</button><button class="social-btn">IG</button><button class="social-btn">TT</button></div></div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/football.js"></script>
+</body>
+</html>
