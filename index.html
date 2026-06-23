@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SportsVerse — Your Ultimate Sports Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">SportsVerse ⚡</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link active">🏠 Home</a>
+    <a href="live-scores.html" class="nav-link"><span class="nav-live-dot"></span> Live Scores</a>
+    <a href="football.html" class="nav-link">⚽ Football</a>
+    <a href="sports.html" class="nav-link">🏆 All Sports</a>
+    <a href="community.html" class="nav-link">💬 Community</a>
+  </div>
+  <div class="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search sports, teams...">
+  </div>
+  <div class="nav-actions">
+    <button class="btn-nav-ghost">Sign in</button>
+    <button class="btn-nav">Join free</button>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobile()">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link active">🏠 Home</a>
+  <a href="live-scores.html" class="mobile-link">🔴 Live Scores</a>
+  <a href="football.html" class="mobile-link">⚽ Football</a>
+  <a href="sports.html" class="mobile-link">🏆 All Sports</a>
+  <a href="community.html" class="mobile-link">💬 Community</a>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker-inner" id="ticker"></div>
+</div>
+
+<section class="hero">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+  <div class="hero-badge"><span class="live-dot"></span> 2.4M fans online</div>
+  <h1>Your ultimate<br><span>sports universe</span></h1>
+  <p class="hero-sub">Every sport. Every team. Every fan. Find your community, follow your squad, never miss a moment.</p>
+  <div class="hero-ctas">
+    <a href="live-scores.html" class="btn-live"><span class="live-dot"></span> Live Scores</a>
+    <a href="football.html" class="btn-outline">⚽ World Cup 2026</a>
+    <a href="sports.html" class="btn-outline">Explore All Sports →</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-lbl">Sports</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">12K+</div><div class="hero-stat-lbl">Teams</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">8.3M</div><div class="hero-stat-lbl">Members</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">140+</div><div class="hero-stat-lbl">Countries</div></div>
+  </div>
+</section>
+
+<div class="featured-wrap">
+  <div class="featured-match" onclick="location.href='live-scores.html'">
+    <div>
+      <div class="featured-label"><span class="live-dot"></span> Featured · FIFA World Cup 2026</div>
+      <div style="font-size:.82rem;color:var(--txt3)">Group Stage · Matchday 2</div>
+    </div>
+    <div class="featured-teams">
+      <div class="team-block">
+        <div class="team-flag">🇧🇷</div>
+        <div class="team-name">Brazil</div>
+        <div class="team-code">BRA</div>
+      </div>
+      <div class="score-block">
+        <div class="score-nums" id="featScore">2 – 1</div>
+        <div class="score-time"><span class="live-dot"></span> <span id="featTime">74'</span></div>
+      </div>
+      <div class="team-block">
+        <div class="team-flag">🇦🇷</div>
+        <div class="team-name">Argentina</div>
+        <div class="team-code">ARG</div>
+      </div>
+    </div>
+    <div class="featured-info">
+      <p>Venue: <strong>SoFi Stadium, LA</strong></p>
+      <p>Attendance: <strong>70,240</strong></p>
+      <button class="view-btn" onclick="event.stopPropagation();location.href='live-scores.html'">View live →</button>
+    </div>
+  </div>
+</div>
+
+<div class="quick-nav">
+  <div class="section-header"><h2 class="section-title">Quick access</h2></div>
+  <div class="quick-grid" id="quickGrid"></div>
+</div>
+
+<div class="main-content">
+  <div class="wc-hero">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div>
+        <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem"><span class="badge badge-live"><span class="live-dot"></span>Live</span><span style="font-size:.78rem;color:var(--txt3)">FIFA World Cup 2026</span></div>
+        <div class="wc-title">🏆 World Cup 2026</div>
+        <div class="wc-sub">USA · Canada · Mexico · 48 teams · 104 matches · June–July 2026</div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a href="football.html" class="btn-primary btn-sm">Full coverage →</a>
+          <a href="live-scores.html" class="btn-outline btn-sm">Live scores</a>
+        </div>
+      </div>
+    </div>
+    <div class="wc-groups" id="wcGroups"></div>
+  </div>
+
+  <div class="section-header"><h2 class="section-title">🔴 Live now</h2><a href="live-scores.html" class="section-link">All scores →</a></div>
+  <div class="live-matches-scroll" id="liveMatchesScroll"></div>
+
+  <div class="section-header"><h2 class="section-title">🔥 Trending</h2><a href="community.html" class="section-link">Community →</a></div>
+  <div class="trending-grid" id="trendingGrid"></div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">SportsVerse ⚡</div>
+        <p>Every sport. Every team. Every fan. Your home for the world of sports.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="live-scores.html">Live Scores</a><a href="football.html">Football</a><a href="sports.html">All Sports</a><a href="community.html">Community</a></div>
+      <div class="footer-col"><h4>Sports</h4><a href="football.html">Football</a><a href="sports.html#basketball">Basketball</a><a href="sports.html#tennis">Tennis</a><a href="sports.html#f1">Formula 1</a><a href="sports.html">More →</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SportsVerse. Built for fans, by fans.</p>
+      <div class="social-links">
+        <button class="social-btn">𝕏</button><button class="social-btn">IG</button><button class="social-btn">TT</button><button class="social-btn">DC</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
