@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — SportsVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/community.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">SportsVerse ⚡</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="live-scores.html" class="nav-link"><span class="nav-live-dot"></span> Live Scores</a>
+    <a href="football.html" class="nav-link">⚽ Football</a>
+    <a href="sports.html" class="nav-link">🏆 All Sports</a>
+    <a href="community.html" class="nav-link active">💬 Community</a>
+  </div>
+  <div class="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search posts...">
+  </div>
+  <div class="nav-actions">
+    <button class="btn-nav-ghost">Sign in</button>
+    <button class="btn-nav">Join free</button>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobile()">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">🏠 Home</a>
+  <a href="live-scores.html" class="mobile-link">🔴 Live Scores</a>
+  <a href="football.html" class="mobile-link">⚽ Football</a>
+  <a href="sports.html" class="mobile-link">🏆 All Sports</a>
+  <a href="community.html" class="mobile-link active">💬 Community</a>
+</div>
+<div class="ticker-wrap"><div class="ticker-inner" id="ticker"></div></div>
+
+<div class="community-hero">
+  <h1>💬 Community</h1>
+  <p>Join 8.3M fans. Share hot takes, debate GOATs, and live every match together.</p>
+</div>
+
+<div class="community-layout">
+  <main>
+    <div class="post-composer">
+      <div class="avatar" style="background:rgba(124,109,250,.2);color:var(--accent)">You</div>
+      <div style="flex:1">
+        <textarea class="composer-input" placeholder="What's happening in sport right now..."></textarea>
+        <div class="composer-actions">
+          <div class="composer-tools">
+            <button class="composer-tool" title="Photo">📷</button>
+            <button class="composer-tool" title="Video">🎥</button>
+            <button class="composer-tool" title="Poll">📊</button>
+            <button class="composer-tool" title="Tag sport">⚽</button>
+          </div>
+          <button class="post-btn" onclick="submitPost()">Post</button>
+        </div>
+      </div>
+    </div>
+    <div class="post-filters" id="postFilters"></div>
+    <div id="postsContainer"></div>
+  </main>
+  <aside class="community-sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-block-header">🔥 Trending topics<span class="sidebar-block-link">See all</span></div>
+      <div id="trendingTopics"></div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-block-header">👥 Who to follow<span class="sidebar-block-link">See all</span></div>
+      <div id="suggestedUsers"></div>
+    </div>
+    <div class="sidebar-block" style="padding:1rem">
+      <p style="font-size:.83rem;color:var(--txt2);margin-bottom:.8rem">📱 Get the SportsVerse app for live alerts</p>
+      <div style="display:flex;gap:6px">
+        <button class="btn-primary btn-sm" style="flex:1;justify-content:center">App Store</button>
+        <button class="btn-outline btn-sm" style="flex:1;justify-content:center">Google Play</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">SportsVerse ⚡</div><p>Every sport. Every team. Every fan.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="live-scores.html">Live Scores</a><a href="football.html">Football</a><a href="sports.html">All Sports</a><a href="community.html">Community</a></div>
+      <div class="footer-col"><h4>Community</h4><a href="#">Forums</a><a href="#">Fantasy</a><a href="#">Predictions</a><a href="#">Highlights</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 SportsVerse.</p><div class="social-links"><button class="social-btn">𝕏</button><button class="social-btn">IG</button><button class="social-btn">TT</button></div></div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/community.js"></script>
+</body>
+</html>
