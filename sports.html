@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Sports — SportsVerse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/sports.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">SportsVerse ⚡</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">🏠 Home</a>
+    <a href="live-scores.html" class="nav-link"><span class="nav-live-dot"></span> Live Scores</a>
+    <a href="football.html" class="nav-link">⚽ Football</a>
+    <a href="sports.html" class="nav-link active">🏆 All Sports</a>
+    <a href="community.html" class="nav-link">💬 Community</a>
+  </div>
+  <div class="nav-search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search sports, teams..." id="globalSearch" oninput="handleSearch(this.value)">
+  </div>
+  <div class="nav-actions">
+    <button class="btn-nav-ghost">Sign in</button>
+    <button class="btn-nav">Join free</button>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobile()">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">🏠 Home</a>
+  <a href="live-scores.html" class="mobile-link">🔴 Live Scores</a>
+  <a href="football.html" class="mobile-link">⚽ Football</a>
+  <a href="sports.html" class="mobile-link active">🏆 All Sports</a>
+  <a href="community.html" class="mobile-link">💬 Community</a>
+</div>
+<div class="ticker-wrap"><div class="ticker-inner" id="ticker"></div></div>
+
+<div class="sports-hero">
+  <h1>🏆 All Sports</h1>
+  <p>50+ sports, 12,000+ teams — find your community and never miss a moment.</p>
+</div>
+
+<div class="sports-controls">
+  <div class="search-bar">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search sports or teams..." id="sportsSearch" oninput="handleSearch(this.value)">
+  </div>
+  <div class="filters" id="filterPills"></div>
+</div>
+
+<div class="sports-grid-wrap">
+  <div class="sports-grid" id="sportsGrid"></div>
+  <div id="noResults" class="no-results" style="display:none"><h3>No sports found</h3><p>Try a different search or filter</p></div>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div class="modal-head" id="modalHead">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-head-content">
+        <div style="font-size:2.2rem;margin-bottom:.5rem" id="modalIcon"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;letter-spacing:-.5px" id="modalName"></div>
+        <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;opacity:.6;margin-top:3px" id="modalCat"></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stat-row" id="modalStats"></div>
+      <div class="modal-section-title">About</div>
+      <p id="modalDesc" style="font-size:.86rem;color:var(--txt2);line-height:1.7;margin-bottom:1.5rem"></p>
+      <div class="modal-section-title">Teams &amp; athletes</div>
+      <div class="modal-teams-grid" id="modalTeams"></div>
+      <button class="modal-follow-btn" id="modalFollowBtn">Join community →</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">SportsVerse ⚡</div><p>Every sport. Every team. Every fan.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="live-scores.html">Live Scores</a><a href="football.html">Football</a><a href="sports.html">All Sports</a><a href="community.html">Community</a></div>
+      <div class="footer-col"><h4>Popular</h4><a href="football.html">Football</a><a href="#">Basketball</a><a href="#">Tennis</a><a href="#">Cricket</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 SportsVerse.</p><div class="social-links"><button class="social-btn">𝕏</button><button class="social-btn">IG</button><button class="social-btn">TT</button></div></div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/sports.js"></script>
+</body>
+</html>
